@@ -3,7 +3,9 @@
 
 ## Overview
 <p>This website is an aesthetic surgery center where people are able to see details about the clinic and make an appointment with the doctor</p>
+
 ---
+
 ## JavaScript carousel
 
 ![Home page](./image/carousel-1.png) ![Home page](./image/carousel-2.png)
