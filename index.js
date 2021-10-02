@@ -66,7 +66,7 @@ const navMenu = function () {
 navMenu();
 
 // slider
-let curentSlide = 0;
+let currentSlide = 0;
 const maxSlide = slider.length;
 
 const goToSlide = function (se, px) {
@@ -75,38 +75,38 @@ const goToSlide = function (se, px) {
   });
 };
 const btnTwoActive = function () {
-  btnTwo.classList.add("slider__activ");
-  btnOne.classList.remove("slider__activ");
+  btnTwo.classList.add("slider__active");
+  btnOne.classList.remove("slider__active");
 };
 const btnOneActive = function () {
-  btnTwo.classList.remove("slider__activ");
-  btnOne.classList.add("slider__activ");
+  btnTwo.classList.remove("slider__active");
+  btnOne.classList.add("slider__active");
 };
 const inToView = function (e) {
   e.classList.remove("hidden");
 };
 //next slide
 const nextSlide = function () {
-  if (curentSlide === maxSlide - 1) {
-    curentSlide = 0;
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
     btnOneActive();
   } else {
-    curentSlide++;
+    currentSlide++;
     btnTwoActive();
   }
 
-  goToSlide(curentSlide, 130);
+  goToSlide(currentSlide, 130);
 };
 
 const prevSlide = function () {
-  if (curentSlide === 0) {
-    curentSlide = maxSlide - 1;
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
   } else {
-    curentSlide--;
+    currentSlide--;
     btnOneActive();
   }
 
-  goToSlide(curentSlide, 130);
+  goToSlide(currentSlide, 130);
 };
 
 const init = function () {
@@ -133,7 +133,7 @@ const handleHover = function (e, op) {
 nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
-// carusel
+// carousel
 let l = 0;
 const right_mover = () => {
   l++;
